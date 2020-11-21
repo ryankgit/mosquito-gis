@@ -7,7 +7,7 @@ The focus of this project was digitizing catch-basins and mosquito traps in Milw
 
 Project site was hosted using Amazon Web Services (AWS) Simple Storage Service (S3).
 
-### Relational Database Tables Created:
+### Database Tables:
 
 **Catch-Basin (CB) Table Attributes:**
 
