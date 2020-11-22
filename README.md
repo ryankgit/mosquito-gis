@@ -60,6 +60,7 @@ Contains all the mosquito Larvae data collected - referenced via the `Key` field
 * `Key` unique identifier for each CB, used to relate with CB Tables
 
 **Example of Maintained Data Connection:**
+
 ![Selecting a CB returns data from Mosquito Larvae Data Table](/example_images/data_connection.png)
 
 
