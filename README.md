@@ -1,13 +1,16 @@
 # mosquito-gis
 
-### Project Overview:
 Static website created to show results of Spring 2020 Mosquito Population Analysis independent study for the CDC's Midwest Center of Excellence for Vector-Borne Diseases (MCEVBD). 
 
-The focus of this project was digitizing catch-basins and mosquito traps in Milwaukee County, as well as creating a relational database tracking mosquito larvae levels. The static website was created to display the findings. Because the focus of the project was GIS, in the interest of time creating the website, the bulk of the text was formated using Microsoft Word-converted html documents. Those documents (index_page.html and maps_page.html) were then referenced from index.html and maps.html. The navigation bar and slideshow container code was pulled and adapted from code examples on w3schools.com. 
+The focus of this project was digitizing catch-basins and mosquito traps in Milwaukee County, as well as creating a relational database tracking mosquito larvae levels. The static website was created to display the findings. Because the focus of the project was GIS, in the interest of time creating the website, the bulk of the text was formated using Microsoft Word-converted html documents. Those documents (index_page.html and maps_page.html) were then referenced from index.html and maps.html.
 
 Project site was hosted using Amazon Web Services (AWS) Simple Storage Service (S3).
 
-### Database Tables:
+# Motivation:
+
+The objective of this semester-long independent study was to work with the Center for Disease Control and Prevention’s (CDC) Upper Midwest Center of Excellence for Vector-Borne Disease (MCEVBD) Mosquito Team to identify and map existing catch basins (storm drains) and mosquito trap sites within four separate study areas in Milwaukee County. I was tasked with producing maps the Mosquito Team could carry in the field to better locate sampled catch basins and mosquito traps, calculate the most efficient routes the team could take to visit each catch basin and trap, and build a geodatabase that would allow additional analysis to be preformed on the collected data.
+
+# Database Tables:
 
 **Catch-Basin (CB) Table Attributes:**
 
@@ -56,4 +59,26 @@ Contains all the mosquito Larvae data collected - referenced via the `Key` field
 * `Weeks post treatment`
 * `Key` unique identifier for each CB, used to relate with CB Tables
 
+**Example of Maintained Data Connection:**
+![Selecting a CB returns data from Mosquito Larvae Data Table](/example_images/data_connection.png)
 
+
+# Shortest Route Analysis:
+
+Using ArcMap’s Network Analyst extension, a shortest path analysis was conducted for each of the study areas. The shortest route for visiting each CB and the shortest route for visiting each trap were calculated for each study area. 
+
+**Route Analysis Settings:**
+* [x] Reorder Stops to Find Optimal Route
+* [ ] Preserve First Stop
+* [ ] Preserve Last Stop
+* [x] Accumulate on Length
+
+![Shortest Route Analysis](/example_images/route_analysis.png)
+
+# Credits:
+
+Thank you to the [Upper Midwest Center of Excellence for Vector-Borne Disease](http://mcevbd.wisc.edu/) for the project.
+
+Site navigation bar adapted from [w3schools.com/css/css_navbar](https://www.w3schools.com/css/css_navbar_horizontal.asp).
+
+Site map slideshow containers adapted from [w3schools.com/howto/js_slideshow](https://www.w3schools.com/howto/howto_js_slideshow.asp).
